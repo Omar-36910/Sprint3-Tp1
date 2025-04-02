@@ -56,20 +56,7 @@ export async function actualizarSuperheroeController(req, res) {
         }
 
         const superheroeFormateado = renderizarSuperheroe(superheroeActualizado);
-        res.status(200).json(superheroeFormateado);
-
-        /* 
-        Tren - 5 vagones
-        
-        bagon 1              |    bagon 2                  |    bagon 3          |    bagon 4                    |     bagon 5
-      ---------------------------------------------------------------------------------------------------------------------------
-        routes               |    controllers              |    services         |    repository                 |     DB
-        peticiones           |    capturar y respondemos   |    lógica           |    buscar, traer y devolver   |     datos
-        ingresa lo que       |    ruta, body               |    operacion,       |    CRUD                       |    
-        quiere el usuario    |                             |    conversiones     |                               |    
-
-        */
-
+        res.status(200).json(superheroeFormateado)
 
     } catch (error) {
         res.status(500).send({ mensaje: 'Error al actualizar el superhéroe', error: error.message });
